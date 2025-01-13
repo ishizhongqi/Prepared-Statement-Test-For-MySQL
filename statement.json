@@ -1,0 +1,52 @@
+{
+    "user": "user",
+    "password": "password",
+    "host": "127.0.0.1",
+    "port": 3306,
+    "database": "employees",
+    "prepared_statement": [
+        {
+            "statement": "SELECT * FROM employees WHERE emp_no = ?",
+            "parameter": [
+                [
+                    {
+                        "type": "int",
+                        "unsigned": false,
+                        "value": 10001
+                    }
+                ]
+            ]
+        },
+        {
+            "statement": "SELECT * FROM employees WHERE gender = ? LIMIT ?",
+            "parameter": [
+                [
+                    {
+                        "type": "varchar",
+                        "value": "F"
+                    },
+                    {
+                        "type": "int",
+                        "unsigned": true,
+                        "value": 10
+                    }
+                ],
+                [
+                    {
+                        "type": "varchar",
+                        "value": "M"
+                    },
+                    {
+                        "type": "int",
+                        "unsigned": true,
+                        "value": 20
+                    }
+                ]
+            ]
+        },
+        {
+            "statement": "SHOW CREATE TABLE employees",
+            "parameter": []
+        }
+    ]
+}
